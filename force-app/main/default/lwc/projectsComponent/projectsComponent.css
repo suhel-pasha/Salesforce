@@ -1,0 +1,44 @@
+.projects {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project {
+    width: calc(50% - 20px);
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1em;
+    color: #666;
+}
+
+.project a {
+    font-size: 1em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}

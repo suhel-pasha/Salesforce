@@ -1,0 +1,15 @@
+.about-me {
+    padding: 50px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
