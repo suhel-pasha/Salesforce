@@ -1,23 +1,2 @@
 <template>
-    <lightning-card title="Google Drive Filesx" icon-name="custom:custom63">
-            <div class="slds-p-around_medium">
-                <template if:true={files.length}>
-                    <ul>
-                        <template for:each={files} for:item="file">
-                            <li key={file.name}>
-                                <a href={file.url} download={file.name}>
-                                    {file.name}
-                                </a>
-                            </li>
-                        </template>
-                    </ul>
-                </template>
-                <template if:false={files.length}>
-                    <p>No files available to download.</p>
-                </template>
-            </div>
-        <template if:true={error}>
-            <div class="slds-text-color_error">error {error}</div>
-        </template>
-    </lightning-card>
 </template>
