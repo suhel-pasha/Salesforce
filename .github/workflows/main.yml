@@ -1,0 +1,21 @@
+name: Install and Check Salesforce CLI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check-sfdx-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Salesforce CLI
+        run: |
+          sudo npm install @salesforce/cli --global
+          sudo echo "force://PlatformCLI::${{ secrets.REFRESH_TOKEN }}@${{ secrets.INSTANCE }}" | sf org login sfdx-url -a myorg -u
+          sf org list
+
+      - name: Check Salesforce CLI version
+        run: sf data query --query "SELECT Id, Name FROM Account" -o myorg
